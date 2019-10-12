@@ -7,11 +7,11 @@ public class CommitTest {
 
     @Before
     public void setup() {
-        commit = new Commit(CommitType.FEAT,
+        commit = new Commit.commit(CommitType.FEAT,
                 Commit.description = "First feature commit");
     }
 
-    @Test
+//    @Test
 
 
 

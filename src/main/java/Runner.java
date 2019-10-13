@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // import static java.lang.Integer.parseInt;
@@ -7,7 +8,9 @@ public class Runner {
 
         Scanner scanner = new Scanner(System.in);
 
-        GitHubAccount gitHubAccount = new GitHubAccount();
+        ArrayList<Account> accounts = new ArrayList<Account>();
+
+//        GitHubAccount gitHubAccount = new GitHubAccount();
         Repository repository = new Repository();
         Commit commit = new Commit();
 
@@ -42,15 +45,19 @@ public class Runner {
                 System.out.println("That username is taken please try again...");
             }
             else {
-                GitHubAccount.createNewUserAccount(userName);
-                System.out.println(" ");
+                accounts.add(new GitHubAccount(userName,
+                        userName,
+                        null,
+                        AccountType.FREE,
+                        false);
+                System.out.println("Account created, please Login.");
             }
 
 
 
         }
         else if(pick == 3) {
-            Repository.getRepositories(userName);
+//            Repository.getRepositories(userName);
         }
         else if(pick == 4) {
 

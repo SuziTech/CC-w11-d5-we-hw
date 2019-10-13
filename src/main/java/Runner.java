@@ -73,6 +73,7 @@ public class Runner {
             System.out.println("You need to choose 1, 2, 3, 4, 5, 6 or 7");
         }
         scanner.close();
+
     }
 
 }

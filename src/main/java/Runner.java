@@ -8,7 +8,7 @@ public class Runner {
 
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Account> accounts = new ArrayList<Account>();
+        ArrayList<GitHubAccount> accounts = new ArrayList<GitHubAccount>();
 
 //        GitHubAccount gitHubAccount = new GitHubAccount();
         Repository repository = new Repository();
@@ -81,6 +81,15 @@ public class Runner {
         }
         scanner.close();
 
+    }
+
+    public String prompt(String question) {
+        String formattedQuestion  = String.format(question);
+        System.out.println(formattedQuestion);
+
+        Scanner scanner = new Scanner(System.in);
+        String response = scanner.next();
+        return response;
     }
 
 }

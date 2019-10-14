@@ -11,7 +11,7 @@ public class GitHubAccount {
     private AccountType accountType;
     private Boolean userLoggedIn__True = false;
 
-    private List<String> usernames = new ArrayList<String>();
+    private static List<String> usernames = new ArrayList<String>();
 
     public GitHubAccount(String username,
                          String displayName,
@@ -25,7 +25,7 @@ public class GitHubAccount {
         this.userLoggedIn__True = userLoggedIn__True;
     }
 
-    public boolean checkUsername(String username) {
+    public static boolean checkUsername(String username) {
         if (usernames.contains(username)) {
             return true;
         }
@@ -34,7 +34,7 @@ public class GitHubAccount {
         }
     }
 
-    public boolean logUserIn(String username) {
+    public static boolean logUserIn(String username) {
 //  called only after CheckUsername() has been called and returned True
 
          userLoggedIn__True = true;
